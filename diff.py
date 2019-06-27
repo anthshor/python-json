@@ -1,0 +1,23 @@
+import subprocess
+myOut = subprocess.run(['ls', '-l', '/users/anthonyshorter/Dropbox'], stdout=subprocess.PIPE)
+print("")
+print("realtime")
+print("-------")
+print("")
+print(myOut.stdout)   
+
+print("")
+print("writing")
+print("-------")
+print("")
+f = open('myFile.txt','w')
+f.write(str(myOut.stdout))
+f.close()
+print("")
+print("reading")
+print("-------")
+print("")
+f2 = open('myFile.txt','r')
+print(f2.read())
+f2.close()
+
