@@ -1,0 +1,14 @@
+default
+kube-dns
+kube-proxy
+kube-public
+kube-system
+myproject
+openshift
+openshift-apiserver
+openshift-controller-manager
+openshift-core-operators
+openshift-infra
+openshift-node
+openshift-service-cert-signer
+openshift-web-console
