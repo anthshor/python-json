@@ -16,22 +16,7 @@ f2 = open(prev_f,'r')
 proj2 = f2.read()
 f2.close()
 
-# diff ... Nice clean way to show additions
+print("Comparing")
 
-print(curr_f)
-print("----------")
-print(proj1)
-print("")
-print("")
-
-print(prev_f)
-print("----------")
-print(proj2)
-print("")
-print("")
-
-print(type(proj2))
-
-print("Differences?")
-print("------------")
-difflib.SequenceMatcher(None, curr_f, prev_f) 
+for line in difflib.unified_diff(proj2.strip().splitlines(), proj1.strip().splitlines(), fromfile=prev_f, tofile=curr_f,lineterm='', n=0):
+    print(line)
